@@ -28,19 +28,19 @@ export default function QuizCard({
       transition={{ duration: 0.4, ease: "easeOut" }}
       className="w-full max-w-3xl mx-auto"
     >
-      <div className="card p-6 md:p-12 cyber-border">
+      <div className="card p-4 md:p-8 cyber-border">
         {/* Question Header */}
-        <div className="mb-6 md:mb-8">
-          <div className="inline-block px-3 py-1 mb-3 md:mb-4 border border-primary text-xs md:text-sm font-bold tracking-wider" style={{ color: 'var(--primary)' }}>
+        <div className="mb-4 md:mb-6">
+          <div className="inline-block px-2 py-0.5 mb-2 md:mb-3 border border-primary text-xs md:text-sm font-bold tracking-wider" style={{ color: 'var(--primary)' }}>
             질문 #{question.id.replace('q', '')}
           </div>
-          <h2 className="text-xl md:text-3xl font-bold mb-3 md:mb-4 leading-tight" style={{ color: 'var(--foreground)' }}>
+          <h2 className="text-lg md:text-2xl font-bold mb-2 md:mb-3 leading-tight" style={{ color: 'var(--foreground)' }}>
             {question.text}
           </h2>
         </div>
 
         {/* Options with proper spacing and labels */}
-        <div className="space-y-2.5 md:space-y-3 mb-8 md:mb-10">
+        <div className="space-y-2 md:space-y-2.5 mb-6 md:mb-8">
           {question.options.map((option, index) => {
             const isSelected = selected === option.id;
 

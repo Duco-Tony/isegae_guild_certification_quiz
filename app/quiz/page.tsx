@@ -44,10 +44,10 @@ export default function QuizPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col p-4 py-8 md:py-12" style={{ background: 'var(--background)' }}>
-      {/* Logo - Top Left */}
+    <div className="min-h-screen flex flex-col p-3 py-6 md:py-8" style={{ background: 'var(--background)' }}>
+      {/* Logo - Top Left - Smaller size to prevent overlap */}
       <motion.div
-        className="absolute top-4 left-4 md:top-6 md:left-6 z-20"
+        className="absolute top-3 left-3 md:top-4 md:left-4 z-20"
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
@@ -56,16 +56,16 @@ export default function QuizPage() {
           <Image
             src="/logo.png"
             alt="이세계길드"
-            width={100}
-            height={56}
-            className="hover:opacity-80 transition-opacity md:w-[120px] md:h-[67px]"
+            width={60}
+            height={34}
+            className="hover:opacity-80 transition-opacity md:w-[80px] md:h-[45px]"
           />
         </Link>
       </motion.div>
 
       {/* Main Content - Centered */}
-      <div className="flex-1 flex items-center justify-center px-2 md:px-0">
-        <div className="max-w-4xl w-full">
+      <div className="flex-1 flex items-center justify-center px-1 md:px-4">
+        <div className="max-w-3xl w-full">
           <ProgressBar current={currentStep + 1} total={questions.length} />
 
           <AnimatePresence mode="wait">

@@ -11,8 +11,8 @@ export default function ProgressBar({ current, total }: ProgressBarProps) {
   const percentage = (current / total) * 100;
 
   return (
-    <div className="w-full mb-6 md:mb-10">
-      <div className="flex justify-between items-center mb-3 md:mb-4">
+    <div className="w-full mb-4 md:mb-6">
+      <div className="flex justify-between items-center mb-2 md:mb-3">
         <div className="flex items-center gap-2 md:gap-3">
           <span className="text-xs md:text-sm font-bold tracking-widest border border-primary px-2 py-1" style={{ color: 'var(--primary)' }}>
             진행률
