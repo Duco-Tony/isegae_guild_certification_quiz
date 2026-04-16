@@ -167,6 +167,7 @@ const certifications: Record<string, Certification> = {
     studyHours: '15-25시간',
     price: '109,000원',
     validity: '평생',
+    retirementDate: new Date('2026-03-31'),
     prerequisites: [],
     koreanExam: true,
     benefits: [
@@ -480,6 +481,28 @@ export function getCertificationWithUrgency(code: string, today: Date = new Date
         ...cert,
         urgency: `2026년 6월 30일 응시 종료됩니다. AI-901로 전환 예정입니다.`,
         urgencyLink: 'https://notion.so/ai-900-retirement-post',  // TODO: 실제 포스팅 링크로 변경 필요
+      };
+    }
+  }
+
+  // MS-900 은퇴 처리
+  if (code === 'MS-900') {
+    const retirementDate = new Date('2026-03-31');
+    const daysLeft = Math.floor(
+      (retirementDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)
+    );
+
+    if (daysLeft <= 0) {
+      return {
+        ...cert,
+        urgency: `2026년 3월 31일에 응시가 종료되었습니다.`,
+        urgencyLink: 'https://notion.so/ms-900-retirement-post',  // TODO: 실제 포스팅 링크로 변경 필요
+      };
+    } else if (daysLeft > 0 && daysLeft <= 90) {
+      return {
+        ...cert,
+        urgency: `2026년 3월 31일 응시 종료 예정입니다.`,
+        urgencyLink: 'https://notion.so/ms-900-retirement-post',  // TODO: 실제 포스팅 링크로 변경 필요
       };
     }
   }

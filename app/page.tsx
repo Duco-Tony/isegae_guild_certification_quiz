@@ -26,22 +26,6 @@ export default function Home() {
         </Link>
       </motion.div>
 
-      {/* Animated Background Elements */}
-      <motion.div
-        className="absolute top-1/4 left-10 w-20 h-20 border-2"
-        style={{ borderColor: 'var(--primary)', transform: 'rotate(45deg)' }}
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 0.2, scale: 1 }}
-        transition={{ delay: 0.5, duration: 0.8 }}
-      />
-      <motion.div
-        className="absolute bottom-1/4 right-10 w-24 h-24 border-2"
-        style={{ borderColor: 'var(--secondary)' }}
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 0.1, scale: 1 }}
-        transition={{ delay: 0.7, duration: 0.8 }}
-      />
-
       <div className="max-w-4xl w-full relative z-10">
         {/* Main Hero Section */}
         <motion.div
