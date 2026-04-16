@@ -35,7 +35,7 @@ export const questions: Question[] = [
       },
       {
         id: 'q1_c',
-        text: '직무 전환 준비 중',
+        text: '이직·재취업·직무 전환 준비 중',
         weight: {
           AI: 0,
           Cloud: 0,
